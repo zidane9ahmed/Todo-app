@@ -1,16 +1,35 @@
-# React + Vite
+# Min ToDo-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Om projektet
+Jag har byggt en enkel ToDo-app med React, JavaScript och CSS.
 
-Currently, two official plugins are available:
+Man kan lägga till uppgifter, markera uppgifter som klara och radera uppgifter.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## State i React
+Jag använder useState för att spara uppgifterna i todos och texten som användaren skriver i input.
 
-## React Compiler
+När jag använder setTodos eller setInput uppdateras informationen på skärmen.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Immutabilitet
+Jag ändrar inte den gamla arrayen direkt.
 
-## Expanding the Oxlint configuration
+När jag lägger till en uppgift använder jag [...todos, newTodo] för att skapa en ny array.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+När jag markerar en uppgift använder jag map() och när jag raderar en uppgift använder jag filter().
+
+## Kodgranskning
+Om man använder todos.push() ändrar man den gamla arrayen direkt.
+
+Det är bättre att skapa en ny array och använda setTodos för att uppdatera state i React.
+
+## Reflektion
+Jag har lärt mig mer om React och hur useState fungerar.
+
+Jag har också lärt mig hur man kan lägga till, ändra och ta bort information i en lista.
+
+Jag har testat appen flera gånger för att kontrollera att funktionerna fungerar.
+
+## Teknik
+- React
+- JavaScript
+- CSS
